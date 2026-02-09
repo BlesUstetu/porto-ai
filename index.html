@@ -1113,39 +1113,5 @@ ${message}`);
 })();
 </script>
 
-<style>
-  .ai-btn{position:fixed;right:18px;bottom:18px;z-index:99999;width:56px;height:56px;border-radius:50%;
-    border:0;cursor:pointer;font-size:22px;background:#111827;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.25);}
-  .ai-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:99998;}
-  .ai-panel{position:fixed;right:18px;bottom:86px;z-index:99999;width:min(420px,calc(100vw - 36px));
-    height:min(640px,calc(100vh - 120px));background:#0b1220;border-radius:16px;overflow:hidden;display:none;}
-  .ai-head{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;
-    background:#111827;color:#fff;font:600 14px system-ui;}
-  .ai-head button{background:none;border:0;color:#fff;cursor:pointer;font-size:18px;}
-  .ai-frame{width:100%;height:calc(100% - 48px);border:0;background:#fff;}
-</style>
-
-<button class="ai-btn" id="aiOpen">💬</button>
-<div class="ai-overlay" id="aiOverlay"></div>
-
-<div class="ai-panel" id="aiPanel">
-  <div class="ai-head">
-    <span>Bles AI</span>
-    <button id="aiClose">✕</button>
-  </div>
-  <iframe class="ai-frame" src="https://bles-k9q0mqpju-blesustetus-projects.vercel.app" loading="lazy"></iframe>
-</div>
-
-<script>
-  const aiOpen = document.getElementById("aiOpen");
-  const aiClose = document.getElementById("aiClose");
-  const aiOverlay = document.getElementById("aiOverlay");
-  const aiPanel = document.getElementById("aiPanel");
-  const open = ()=>{ aiOverlay.style.display="block"; aiPanel.style.display="block"; };
-  const close = ()=>{ aiOverlay.style.display="none"; aiPanel.style.display="none"; };
-  aiOpen.onclick = open; aiClose.onclick = close; aiOverlay.onclick = close;
-</script>
-
-
 </body>
 </html>
